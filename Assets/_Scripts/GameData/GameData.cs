@@ -1,11 +1,12 @@
 using Evstr.GUI;
 using System;
 
-namespace Evstr.GameData
+namespace Evstr.GameConfig
 {
+    [Serializable]
     public class GameData : IGameData
     {
-        private int _score;
+        [NonSerialized] private int _score;
         private int _coins;
 
         public int GetScore
@@ -18,7 +19,7 @@ namespace Evstr.GameData
             get => _coins;
         }
 
-        private GUIService _guiService;
+        [NonSerialized] private GUIService _guiService;
 
         public void TransferDependency(GUIService guiService)
         {

@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Evstr.GUI;
+using Evstr.Units;
+using Evstr.Zenject;
 
 namespace Evstr.States
 {
@@ -13,9 +13,11 @@ namespace Evstr.States
         private RestartGameState _restartGameState;
         private IState _currenState;
 
-        public StateMachine()
+        public StateMachine(ObstacleSpawner obstacleSpawner, GUIService guiService, GameController gameController)
         {
-
+            _startGameState = new StartGameState(obstacleSpawner, guiService);
+            _stopGameState = new StopGameState(obstacleSpawner, guiService);
+            _restartGameState = new RestartGameState(gameController);
         }
 
         public void EntryState(StateGame stateGame)

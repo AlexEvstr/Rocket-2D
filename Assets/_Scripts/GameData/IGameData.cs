@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Evstr.GameData
+namespace Evstr.GameConfig
 {
     public interface IGameData
     {

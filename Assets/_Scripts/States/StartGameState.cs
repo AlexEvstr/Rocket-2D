@@ -1,4 +1,5 @@
 using Evstr.Units;
+using Evstr.GUI;
 using UnityEngine;
 
 namespace Evstr.States
@@ -6,10 +7,12 @@ namespace Evstr.States
     public class StartGameState : IState
     {
         private ObstacleSpawner _obstacleSpawner;
+        private GUIService _guiService;
 
-        public StartGameState(ObstacleSpawner obstacleSpawner)
+        public StartGameState(ObstacleSpawner obstacleSpawner, GUIService guiService)
         {
             _obstacleSpawner = obstacleSpawner;
+            _guiService = guiService;
         }
 
         public void Enter()
