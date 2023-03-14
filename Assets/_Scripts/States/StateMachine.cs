@@ -13,11 +13,11 @@ namespace Evstr.States
         private RestartGameState _restartGameState;
         private IState _currenState;
 
-        public StateMachine(ObstacleSpawner obstacleSpawner, GUIService guiService, GameController gameController)
+        public StateMachine(ObstacleSpawner obstacleSpawner, GUIService guiService)
         {
             _startGameState = new StartGameState(obstacleSpawner, guiService);
             _stopGameState = new StopGameState(obstacleSpawner, guiService);
-            _restartGameState = new RestartGameState(gameController);
+            _restartGameState = new RestartGameState();
         }
 
         public void EntryState(StateGame stateGame)

@@ -9,13 +9,8 @@ namespace Evstr.GUI
         [SerializeField] private GameObject _startPanel;
         [SerializeField] private GameObject _gameOverPanel;
         [SerializeField] private Text _textScore;
-        [SerializeField] private Text _textCoins;
 
-        private void OnEnable()
-        {
-            _textScore.text = "0";
-            _textCoins.text = "0";
-        }
+        public int _score = 0;
 
         public void SetVisiblePanelStart(bool value)
         {
@@ -31,10 +26,18 @@ namespace Evstr.GUI
         {
             _textScore.text = score.ToString();
         }
-
-        public void UpdateTextCoins(int coins)
+        private void Start()
         {
-            _textCoins.text = coins.ToString();
+            InvokeRepeating("IncreaseScore", 0, 0.3f);
+        }
+
+        public void IncreaseScore()
+        {
+            if (!_startPanel.activeInHierarchy)
+            { 
+                _score += 1;
+                UpdateTextScore(_score);
+            }
         }
     }
 }

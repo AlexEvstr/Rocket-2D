@@ -18,7 +18,7 @@ namespace Evstr.Player
         public float ForceUp => _forceUp;
 
         [Inject]
-        public void Construct(IInputSystem inputSystem)
+        private void Construct(IInputSystem inputSystem)
         {
             _inputSystem = inputSystem;
 
