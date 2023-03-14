@@ -1,6 +1,8 @@
 using Evstr.Generals;
 using Evstr.States;
+using Evstr.Units;
 using System;
+using UnityEngine;
 using Zenject;
 
 namespace Evstr.Zenject
@@ -9,8 +11,11 @@ namespace Evstr.Zenject
     {
         public event Action OnUpdate;
 
+        [SerializeField] private ObstacleSpawner _obstacleSpawner;
+
         public override void InstallBindings()
         {
+            Container.BindInstance(_obstacleSpawner);
             Container.BindInstance<IUpdateLoop>(this);
             Container.Bind<IInputSystem>().To<InputSystemAndroid>().AsSingle();
 

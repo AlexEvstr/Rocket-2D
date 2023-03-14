@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Evstr.Units
 {
-    public class ObstacleDetector : IDetector
+    public class ObstacleDetector : MonoBehaviour, IDetector
     {
         private StateMachine _stateMachine;
 
