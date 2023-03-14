@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 986621875}
   - component: {fileID: 986621874}
   - component: {fileID: 986621876}
+  - component: {fileID: 986621877}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -1261,6 +1262,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 37.609997, y: 3.5443015}
   m_EdgeRadius: 0
+--- !u!50 &986621877
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986621872}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1256195951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1615,7 @@ GameObject:
   - component: {fileID: 1699143167}
   - component: {fileID: 1699143166}
   - component: {fileID: 1699143168}
+  - component: {fileID: 1699143169}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1693,6 +1716,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 37.609997, y: 3.5443015}
   m_EdgeRadius: 0
+--- !u!50 &1699143169
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699143165}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1738841611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1938,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2420253875997181097, guid: 54b73e5b218d14ede91293004a912f13, type: 3}
+      propertyPath: m_Mass
+      value: 0.8946341
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420253875997181097, guid: 54b73e5b218d14ede91293004a912f13, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420253875997181097, guid: 54b73e5b218d14ede91293004a912f13, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420253875997181097, guid: 54b73e5b218d14ede91293004a912f13, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420253875997181098, guid: 54b73e5b218d14ede91293004a912f13, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3086217389920624137, guid: 54b73e5b218d14ede91293004a912f13, type: 3}
       propertyPath: m_RootOrder
       value: 1

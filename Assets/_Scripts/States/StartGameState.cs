@@ -19,6 +19,7 @@ namespace Evstr.States
         {
             Time.timeScale = 1;
             _obstacleSpawner.StartSpawn();
+            _guiService.SetVisiblePanelStart(false);
             
         }
 

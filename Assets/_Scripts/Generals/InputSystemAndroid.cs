@@ -19,12 +19,12 @@ namespace Evstr.Generals
 
         public void OnEnable()
         {
-
+            _updater.OnUpdate += Update;
         }
 
         public void OnDisable()
         {
-
+            _updater.OnUpdate -= Update;
         }
 
         public void Update()
