@@ -7,7 +7,7 @@ namespace Evstr.Units
     {
         private float _coordinateX = 12.0f;
         private float _coordinateY;
-        private float _borderY;
+        private float _borderY = 5.0f;
         private Vector2 _spawnPosition;
 
         public void StartSpawn()
